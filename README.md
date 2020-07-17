@@ -1,3 +1,4 @@
+Prerequisite: QIIME2  For installation of QIIME2, please refer to https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.qiime2.org%2F2020.6%2Finstall%2F
 # amplicon-processor  
 automatically process miseq pair-end fastq amplicon data  This pipeline is grogramed by using shell by jkyin in 7.2020 
 ```
