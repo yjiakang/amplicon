@@ -11,3 +11,4 @@ automatically process miseq pair-end fastq amplicon data  This pipeline is grogr
                 -a [silva_fl/silva_v4/gg_fl/gg_v4 | choose one from above, default: gg_v4]
                 -h [print this help info]"
 ```
+For more detailed help, please refer to https://www.jianshu.com/p/a7680eef6d20
