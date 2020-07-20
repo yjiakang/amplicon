@@ -205,6 +205,7 @@ else
         step3="error happened when performing ${denoise_algo} for denoising data, please check!"
 fi
 
+
 #summarize feature table
 echo "summarizing feature table ..."
 if [ ! -f ${denoise_dir}/table.qzv ];then
