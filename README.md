@@ -1,3 +1,4 @@
+![pipeline](https://github.com/yjiakang/amplicon/blob/master/picture/Amp.tif)
 ## Prerequisite: QIIME2  
 For installation of QIIME2, please refer to https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.qiime2.org%2F2020.6%2Finstall%2F
 ## mplicon-processor  
