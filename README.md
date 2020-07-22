@@ -1,4 +1,4 @@
-![diagram](https://github.com/yjiakang/amplicon/blob/master/Diagram.png)
+![diagram](https://github.com/yjiakang/amplicon/blob/master/Amplicon_diagram.png)
 ## Prerequisite: QIIME2  
 For installation of QIIME2, please refer to https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.qiime2.org%2F2020.6%2Finstall%2F
 ## mplicon-processor  
