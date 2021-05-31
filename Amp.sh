@@ -30,7 +30,7 @@ qiime dada2 denoise-paired \
 	--p-trunc-len-r 0 \
 	--p-n-threads $threads \
 	--o-table ${denoise_dir}/table.qza \
-       	--o-representative-sequences ${denoise_dir}/rep-seqs.qza \
+    --o-representative-sequences ${denoise_dir}/rep-seqs.qza \
 	--o-denoising-stats ${denoise_dir}/stats.qza 
 }
 
@@ -53,7 +53,7 @@ qiime quality-filter q-score \
 #denoise
 qiime deblur denoise-16S \
 	--i-demultiplexed-seqs ${denoise_dir}/demux-joined-filtered.qza \
-	--p-trim-length 460 \
+	--p-trim-length 430 \
 	--o-representative-sequences ${denoise_dir}/rep-seqs.qza \
 	--o-table ${denoise_dir}/table.qza \
 	--p-sample-stats \
