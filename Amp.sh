@@ -1,7 +1,7 @@
 #!/bin/bash
 usage(){
 	echo "Usage:
-       		-i [abs_input_file_path.txt | required]
+       	-i [abs_input_file_path.txt | required]
 		-o [abs_output_dir | required]
 		-m [abs_sample_metadata.tsv | required]
 		-n [threads | defalut: 4]
