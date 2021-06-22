@@ -1,4 +1,4 @@
-<div align=center><img src="https://github.com/yjiakang/amplicon/blob/master/Amp.png" width="300" height="500"/></div>
+
 ## Prerequisite: QIIME2  
 For installation of QIIME2, please refer to https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.qiime2.org%2F2020.6%2Finstall%2F
 ## mplicon-processor  
@@ -17,3 +17,4 @@ Usage:
                 -h [print this help info]
 ```
 For more detailed help, please refer to https://www.jianshu.com/p/a7680eef6d20
+<div align=center><img src="https://github.com/yjiakang/amplicon/blob/master/Amp.png" width="300" height="500"/></div>
