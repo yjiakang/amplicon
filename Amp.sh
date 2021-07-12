@@ -1,7 +1,7 @@
 #!/bin/bash
 usage(){
 	echo "Usage:
-       	-i [abs_input_file_path.txt | required]
+       		-i [abs_input_file_path.txt | required]
 		-o [abs_output_dir | required]
 		-m [abs_sample_metadata.tsv | required]
 		-n [threads | defalut: 4]
@@ -30,8 +30,9 @@ qiime dada2 denoise-paired \
 	--p-trunc-len-r 0 \
 	--p-n-threads $threads \
 	--o-table ${denoise_dir}/table.qza \
-    --o-representative-sequences ${denoise_dir}/rep-seqs.qza \
-	--o-denoising-stats ${denoise_dir}/stats.qza 
+       	--o-representative-sequences ${denoise_dir}/rep-seqs.qza \
+	--o-denoising-stats ${denoise_dir}/stats.qza \
+	--verbose
 }
 
 
@@ -256,7 +257,7 @@ determ_samp_dep(){
 	nrow=`awk 'NR==3{print NF}' feature-table.txt`
 	for i in `seq 2 $nrow`;do awk -F"\t" -v ncol=$i 'BEGIN{sum=0}{sum+=$ncol}END{print sum}' feature-table.txt >> feature_count.txt;done
 	sample_depth=`awk 'NR==1{min=$1;next}{min=min<$1?min:$1}END{print min}' feature_count.txt` #sample the min counts for using all our samples
-	cd ../../ && mv -f ${table_dir} table.qza.unzip
+	cd ../../
 	echo "sampling depth: "${sample_depth}
 }
 if [ ! -n "${sample_depth}" ];then
