@@ -81,7 +81,7 @@ denoise_dir=${output_dir}/${denoise_algo}
 
 
 #get qiime env name
-qiime=`conda env list | grep "qiime.*" | awk '{print $1}'`
+qiime=`conda env list | grep "qiime2" | awk '{print $1}'`
 echo "qiime version: "$qiime
 
 
@@ -113,11 +113,10 @@ fi
 
 #get database url
 wget -q -O "${output_dir}/database_url.txt" "https://docs.qiime2.org/${qiime##*-}/data-resources/"
-silva_fl_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "Silva" | grep "full" | cut -d "\"" -f 4`
-silva_v4_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "Silva" | grep "515" | cut -d "\"" -f 4`
-gg_fl_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "Greengenes" | grep "full" | cut -d "\"" -f 4`
-gg_v4_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "Greengenes" | grep "515" | cut -d "\"" -f 4`
-
+silva_fl_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "full" | cut -d "\"" -f 4`
+silva_v4_url=`cat ${output_dir}/database_url.txt | grep "nb-classifier" | grep "515" | cut -d "\"" -f 4`
+gg_fl_url=`cat ${output_dir}/database_url.txt | grep "nb.qza" | grep "full" | cut -d "\"" -f 4`
+gg_v4_url=`cat ${output_dir}/database_url.txt | grep "nb.qza" | grep "515" | cut -d "\"" -f 4`
 
 if [ "$dataname" = "gg_v4" ];then
 	database="${output_dir}/database/${gg_v4_url##*/}"
