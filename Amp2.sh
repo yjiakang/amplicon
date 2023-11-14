@@ -295,16 +295,6 @@ else
 	exit
 fi
 
-#Alpha diversity - faith_pd
-echo "calculating faith_pd index ..."
-if [ ! -f "${denoise_dir}/sample-depth-${sample_depth}-core-metrics-results/faith_pd_vector.qza" ];then
-	qiime diversity alpha-group-significance \
-		--i-alpha-diversity ${denoise_dir}/sample-depth-${sample_depth}-core-metrics-results/faith_pd_vector.qza \
-		--m-metadata-file ${metadata_file} \
-		--o-visualization ${denoise_dir}/sample-depth-${sample_depth}-core-metrics-results/faith-pd-group-significance.qzv
-else
-	echo "faith_pd index using sample depth: ${sample_depth} has been done, skipping ..."
-fi
 #Rarefication curve
 echo "doing rarefication curve ..."
 if [ ! -f ${denoise_dir}/p-max-depth-${p_max_depth}-alpha-rarefaction.qzv ];then
